@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Simple Web page for learning</title>
+        <script>
+            function showInput() 
+            {
+                 var displayemail;
+                 var email2;
+                 var email = document.getElementById('email');
+                 var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; ; 
+                 if(email.value.match(mailformat))
+                 {
+                    email2 = email.value;
+                 }
+                 else
+                 {
+                     alert("please enter valid email address")
+                 }
+                 var FirstName = document.getElementById('FirstName');
+                var LastName = document.getElementById('LastName');
+                document.getElementById("displayemail").innerHTML = email2 + " is successfully updated";
+                alert(FirstName.value +"," + LastName.value + "," + email2);               
+             };
+
+            </script> 
+        
+    </head>
+    <body>
+       
+        <form>
+         First Name : <input type="text" id="FirstName"> <br>
+         Last Name  : <input type="text" id="LastName"><br>
+         <div id="displayemail">Enter email address</div>
+         Email      : <input type = "text" id="email">     
+           
+        </form>                                 
+        <input type="submit" onclick="showInput()">
+        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    </body>
+</html>
